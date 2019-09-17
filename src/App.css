@@ -1,0 +1,200 @@
+/* Import Custom Font Styles */
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Aldrich&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-image: linear-gradient(to right, #000000, #434343, #000000);
+  color: #FFF;
+  font-family: 'Aldrich', sans-serif;
+  font-size: 5vw;
+  height: 100vh;
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10% 15% 15% 45% 15%;
+  grid-template-areas: 
+    "title" "timers" "currentTimer" "clock" "controls";
+  align-items: center;
+  justify-items: center;
+  height: 100vh;
+}
+
+#title {
+  color: #C40000;
+  font-size: 1.2rem;
+  grid-area: title;
+  text-align: center;
+  text-shadow: 1px 2px #380000 !important;
+  width: 100%;
+}
+
+#timer-controls {
+  font-size: 1em;
+  grid-area: timers;
+  height: 100%;
+  justify-content: space-around;
+}
+
+.timer-control {
+  flex-direction: column;
+}
+
+.timer-btn-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center; 
+  width: auto;
+}
+
+#clock-label {
+  color: #C40000;
+  font-size: 3rem;
+  grid-area: currentTimer;
+  text-shadow: 1px 4px #380000 !important;
+}
+
+#clock-face {
+  border: 10px ridge #8B0000;
+  border-radius: 20px;
+  grid-area: clock;
+  margin: 0 auto;
+  height: 100%;
+  width: 18rem;
+  max-width: 800px;
+}
+
+#time-left {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 6em;
+  text-shadow: 2px 4px #111111 !important;
+}
+
+#clock-controls {
+  grid-area: controls;
+  height: 100%;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  color: #FF8F00;
+  cursor: pointer;
+  font-size: 1.5em;
+  transition: .3s;
+}
+
+button:hover {
+  color: #C40000;
+  transform: scale(1.1);
+}
+
+#start-stop, #reset {
+  font-size: 2.5em;
+  margin: 0 15px;
+}
+
+@media (min-width: 768px) {
+  html, body {
+    font-size: 4vw;
+  }
+
+  #clock-label {
+    font-size: 2.5rem;
+  }
+
+  #time-left {
+    font-size: 5em;
+  }
+
+  button {
+    font-size: 1.2em;
+  }
+
+  #start-stop, #reset {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 1024px) {
+  html, body {
+    font-size: 3vw;
+  }
+
+  #clock-face {
+    border-width: 15px;
+  }
+
+  #time-left {
+    font-size: 4em;
+  }
+}
+
+@media (min-width: 1440px) {
+  #time-left {
+    font-size: 3em;
+  }
+}
+
+@media (min-width: 1990px) {
+  #clock-face {
+    border-width: 30px;
+    max-width: 1200px;
+  }
+
+  #title, #clock-label {
+    text-shadow: 3px 10px #380000 !important;
+  }
+}
+
+/*.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+*/
